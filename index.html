@@ -227,6 +227,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   </div>
 </div>
 
+
+  <div style="max-width:600px;margin:8px auto 0;padding:0 16px">
+    <div style="background:#FCEBEB;border-radius:8px;padding:8px 11px;font-size:11px;color:#791F1F;display:flex;gap:7px;align-items:flex-start;line-height:1.45">
+      <span style="flex-shrink:0">⚠️</span>
+      <div><strong>Elbow protocol:</strong> Renegade row and clean+press removed — replaced with elbow-safe alternatives. If any exercise causes elbow pain, stop and substitute with a machine equivalent.</div>
+    </div>
+  </div>
 <!-- HOME SCREEN -->
 <div class="screen on" id="screen-home">
   <div class="phase-bar">
@@ -331,7 +338,7 @@ const PHASES=[
    mods:{
      dayA:{sets:'4×8',rest:'90s',tempo:'3s down, pause, explode up',note:'Goblet squat at ~60% effort. Single-leg RDL with bodyweight or very light KB only.'},
      dayB:{sets:'4×8',rest:'90s',tempo:'3s down, 1s pause, press',note:'Bench and row with full control. Pull-up with band if needed.'},
-     dayC:{rounds:4,hiit:'10 rounds × 20s on / 40s off',note:'KB complex at moderate weight, perfect form priority.'},
+     dayC:{rounds:4,hiit:'10 rounds × 20s on / 40s off',note:'KB complex at moderate weight, perfect form priority. Push press + bench row are the elbow-safe movements.'},
      dayD:{note:'Full mobility flow. TKE 4×15. Wall sit 3×40s.'}
    },
    changes:[
@@ -498,7 +505,7 @@ regular:[
   {day:'Sun',ico:'🏋️',type:'gym',pill:'Day A',pc:'pg',
    title:'Day A — lower body',shift:'Day off',sub:'Always Day A. Train 08:30–09:30.',
    badge:'Gym · ~50 min',bc:'bg-gym',dayKey:'A',
-   note:'Sunday is always Day A — lower body. Freshest legs of the week.',
+   note:'Sunday is always Day A — lower body. Freshest legs of the week. Suitcase carry replaced with KB deadlift hold — same core stimulus, no space needed.',
    warmup:[
     {id:'bike-wu',n:'Stationary bike — easy',d:'5 min low resistance. Lubricates the knee before loading. Non-negotiable every session.',s:'5 min',r:'',l:'',knee:false,safe:false},
     {id:'hip9090',n:'Hip 90/90 rotations',d:'Sit on floor, rotate both knees side to side, hold 2s each end.',s:'2×10/side',r:'',l:'https://www.youtube.com/results?search_query=hip+90+90+rotation+mobility',knee:false,safe:false},
@@ -512,7 +519,7 @@ regular:[
     {id:'step-up',n:'Step-up to balance',d:'Step onto box, drive through heel, knee to hip height, hold 2s, step down slowly. Replaces box jump.',s:'3×8/side',r:'75s',l:'https://www.youtube.com/results?search_query=step+up+to+balance+exercise+tutorial',knee:true,safe:false},
    ],
    core:[
-    {id:'suitcase-carry',n:'KB Suitcase carry',d:'Hold KB in one hand, walk 30m perfectly upright. Anti-lateral core + hip stability.',s:'3×30m/side',r:'45s',l:'https://www.youtube.com/results?search_query=kettlebell+suitcase+carry+tutorial',knee:false,safe:false},
+    {id:'kb-dl-hold',n:'Single-arm KB deadlift hold',d:'KB beside foot. Hinge, pick up, stand tall, hold 40s. Shoulders level, core braced, no side lean. No space needed.',s:'3×40s/side',r:'45s',l:'https://www.youtube.com/results?search_query=single+arm+kettlebell+deadlift+tutorial',knee:false,safe:false},
     {id:'dead-bug',n:'Dead bug',d:'On back, arms up, knees 90°. Lower opposite arm + leg, exhale throughout.',s:'3×8/side',r:'30s',l:'https://www.youtube.com/results?search_query=dead+bug+core+exercise+tutorial',knee:false,safe:false},
    ],
    cooldown:[
@@ -600,19 +607,19 @@ regular:[
   {day:'Thu',ico:'🔥',type:'gym',pill:'Day C',pc:'pg',
    title:'Day C — full body KB + HIIT',shift:'8→17 / 9→18 / 10→19',sub:'Hardest session. After work or before (10→19: 07:30).',
    badge:'Gym · ~55 min',bc:'bg-gym',dayKey:'C',
-   note:'Thursday is Day C — hardest session. Full KB complex + bike HIIT. Sport replaces this entirely.',
+   note:'Thursday is Day C — hardest session. KB complex is elbow-safe (push press + row from bench, no clean catch or renegade row). Bike HIIT replaces all sprint work. Sport replaces this entirely.',
    warmup:[
     {id:'bike-wu',n:'Stationary bike — easy',d:'5 min.',s:'5 min',r:'',l:'',knee:false,safe:false},
     {id:'bear-crawl',n:'Bear crawl',d:'20m forward + back. Full body activation, zero knee impact.',s:'2 lengths',r:'',l:'https://www.youtube.com/results?search_query=bear+crawl+exercise+tutorial',knee:false,safe:false},
    ],
    main:[
-    {id:'kb-complex',n:'KB complex',d:'No rest within round, 90s between. Clean+press (5/side) → Front squat (5) → Swing (10) → Renegade row (5/side).',s:'4 rounds',r:'90s',l:'https://www.youtube.com/results?search_query=kettlebell+complex+workout+tutorial',knee:false,safe:false},
+    {id:'kb-complex',n:'KB complex — elbow safe',d:'No rest within round, 90s between. Push press (5/side) → Front squat (5) → Swing (10) → Single-arm KB row from bench (5/side). Replaces clean+press and renegade row — elbow-safe versions.',s:'4 rounds',r:'90s',l:'https://www.youtube.com/results?search_query=kettlebell+push+press+tutorial',knee:false,safe:false},
     {id:'bike-hiit',n:'Bike HIIT',d:'20s absolute max effort, 40s easy recovery. Replaces all sprint work — zero knee impact.',s:'10 rounds',r:'40s easy',l:'https://www.youtube.com/results?search_query=stationary+bike+HIIT+20+40+protocol',knee:false,safe:false},
    ],
    core:[
     {id:'hip-cars',n:'Hip CARs',d:'2×5 each direction, each side. Full range, maximum slowness.',s:'2×5/side',r:'',l:'https://www.youtube.com/results?search_query=hip+controlled+articular+rotation',knee:false,safe:false},
     {id:'bretzel',n:'Bretzel stretch',d:'Lie on side, stack knees. Top hand grabs top foot, bottom arm reaches opposite.',s:'2×60s/side',r:'',l:'https://www.youtube.com/results?search_query=bretzel+stretch+tutorial',knee:false,safe:false},
-    {id:'tgu',n:'KB Turkish get-up',d:'Full sequence from lying to standing. Master each phase.',s:'2×2/side',r:'',l:'https://www.youtube.com/results?search_query=kettlebell+turkish+get+up+tutorial',knee:false,safe:false},
+    {id:'bear-hold',n:'Bear crawl hold',d:'On all-fours, knees 2cm off the floor. Hold perfectly still — back flat, hips level, core on. Same full-body stability as the Turkish get-up without the complex sequence.',s:'4×20–30s',r:'30s',l:'https://www.youtube.com/results?search_query=bear+crawl+hold+stability+exercise',knee:false,safe:false},
     {id:'tke',n:'Terminal knee extension (band)',d:'3×15 right knee. End every session.',s:'3×15',r:'',l:'https://www.youtube.com/results?search_query=terminal+knee+extension+band',knee:false,safe:false},
    ],
    cooldown:[],opt:null,
@@ -677,7 +684,7 @@ evening:[
     {id:'step-up',n:'Step-up to balance',d:'Drive through heel, hold 2s at top.',s:'3×8/side',r:'75s',l:'https://www.youtube.com/results?search_query=step+up+balance+exercise',knee:true,safe:false},
    ],
    core:[
-    {id:'suitcase-carry',n:'KB Suitcase carry',d:'30m/side, perfectly upright.',s:'3×30m/side',r:'45s',l:'https://www.youtube.com/results?search_query=kettlebell+suitcase+carry',knee:false,safe:false},
+    {id:'kb-dl-hold',n:'Single-arm KB deadlift hold',d:'Pick up KB, stand tall, hold 40s. Shoulders level, no side lean.',s:'3×40s/side',r:'45s',l:'https://www.youtube.com/results?search_query=single+arm+kettlebell+deadlift+tutorial',knee:false,safe:false},
     {id:'dead-bug',n:'Dead bug',d:'Lower opposite arm + leg slowly.',s:'3×8/side',r:'30s',l:'https://www.youtube.com/results?search_query=dead+bug+core+tutorial',knee:false,safe:false},
    ],
    cooldown:[
@@ -765,7 +772,7 @@ evening:[
   {day:'Thu',ico:'🔥',type:'gym',pill:'Day C',pc:'pg',
    title:'Day C — full body KB + HIIT',shift:'Morning free · Work 15→19',sub:'Train 09:00–10:10. Perfect Day C slot.',
    badge:'Gym · ~55 min',bc:'bg-gym',dayKey:'C',
-   note:'Thursday morning free. Train 09:00, done 10:10, big lunch, rest before 15:00 shift.',
+   note:'Thursday morning free. Train 09:00, done 10:10. KB complex uses elbow-safe movements throughout — push press and bench row replace clean+press and renegade row.',
    warmup:[
     {id:'bike-wu',n:'Stationary bike — easy',d:'5 min.',s:'5 min',r:'',l:'',knee:false,safe:false},
     {id:'bear-crawl',n:'Bear crawl',d:'20m forward + back.',s:'2 lengths',r:'',l:'https://www.youtube.com/results?search_query=bear+crawl+exercise+tutorial',knee:false,safe:false},
@@ -777,7 +784,7 @@ evening:[
    core:[
     {id:'hip-cars',n:'Hip CARs',d:'2×5/side.',s:'2×5/side',r:'',l:'https://www.youtube.com/results?search_query=hip+CAR+mobility',knee:false,safe:false},
     {id:'bretzel',n:'Bretzel stretch',d:'2×60s/side.',s:'2×60s/side',r:'',l:'https://www.youtube.com/results?search_query=bretzel+stretch+tutorial',knee:false,safe:false},
-    {id:'tgu',n:'KB Turkish get-up',d:'Full sequence. 2×2/side.',s:'2×2/side',r:'',l:'https://www.youtube.com/results?search_query=kettlebell+turkish+get+up+tutorial',knee:false,safe:false},
+    {id:'bear-hold',n:'Bear crawl hold',d:'All-fours, knees 2cm off the floor, hold 20–30s. Back flat, hips level, core braced.',s:'4×25s',r:'30s',l:'https://www.youtube.com/results?search_query=bear+crawl+hold+stability+exercise',knee:false,safe:false},
     {id:'tke',n:'Terminal knee extension (band)',d:'3×15 right knee.',s:'3×15',r:'',l:'https://www.youtube.com/results?search_query=terminal+knee+extension+band',knee:false,safe:false},
    ],
    cooldown:[],opt:null,
@@ -798,7 +805,7 @@ evening:[
     {id:'cars-full',n:'Hip + shoulder CARs',d:'2×5/joint.',s:'2×5/joint',r:'',l:'https://www.youtube.com/results?search_query=CARs+mobility+routine',knee:false,safe:false},
     {id:'deep-squat',n:'Deep squat breathing hold',d:'3×60s.',s:'3×60s',r:'',l:'https://www.youtube.com/results?search_query=deep+squat+hold+mobility',knee:false,safe:false},
     {id:'bretzel',n:'Bretzel stretch',d:'2×60s/side.',s:'2×60s/side',r:'',l:'https://www.youtube.com/results?search_query=bretzel+stretch+tutorial',knee:false,safe:false},
-    {id:'tgu',n:'KB Turkish get-up',d:'2×2/side.',s:'2×2/side',r:'',l:'https://www.youtube.com/results?search_query=kettlebell+turkish+get+up+tutorial',knee:false,safe:false},
+    {id:'bear-hold',n:'Bear crawl hold',d:'All-fours, knees 2cm off floor, hold 25s.',s:'3×25s',r:'30s',l:'https://www.youtube.com/results?search_query=bear+crawl+hold+stability+exercise',knee:false,safe:false},
     {id:'y-balance',n:'Y-balance single-leg reach',d:'3×5/side. Right focus.',s:'3×5/side',r:'',l:'https://www.youtube.com/results?search_query=Y+balance+ankle+stability',knee:false,safe:false},
     {id:'nordic-curl',n:'Nordic curl — eccentric',d:'3×5.',s:'3×5',r:'',l:'https://www.youtube.com/results?search_query=nordic+curl+eccentric',knee:false,safe:false},
     {id:'tke',n:'Terminal knee extension (band)',d:'4×15 extended set.',s:'4×15',r:'',l:'https://www.youtube.com/results?search_query=terminal+knee+extension+band',knee:false,safe:false},
