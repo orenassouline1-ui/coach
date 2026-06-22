@@ -537,7 +537,7 @@ regular:[
    ]}
   },
   {day:'Mon',ico:'💪',type:'gym',pill:'Day B',pc:'pg',
-   title:'Day B — upper body + abs + triceps',shift:'8→17 / 9→18 / 10→19',sub:'Upper after lower = no conflict. After work or before (10→19: 07:30).',
+   title:'Day B — upper body + abs + triceps',shift:'8→17 / 9→18 / 10→19',sub:'Upper body · triceps · abs · Zone 2. After work or before (10→19: 07:30).',
    badge:'Gym · ~65 min',bc:'bg-gym',dayKey:'B',
    note:'Upper body directly after leg day — completely fine, different muscle groups.',
    warmup:[
@@ -554,12 +554,16 @@ regular:[
     {id:'face-pull',n:'Face pull / band pull-apart',d:'Rear delt + rotator cuff. Protects shoulders for swimming. Never skip.',s:'3×15',r:'45s',l:'https://www.youtube.com/results?search_query=face+pull+cable+rotator+cuff',knee:false,safe:false},
    ],
    core:[],
+   triceps:[
+    {id:'cable-pushdown',n:'Cable tricep pushdown',d:'Cable stack, rope or bar attachment. Elbows pinned to sides, extend fully. Elbow stays stable — safe for your fracture history.',s:'3×12',r:'60s',l:'https://www.youtube.com/results?search_query=cable+tricep+pushdown+tutorial',knee:false,safe:false},
+    {id:'db-overhead-tri',n:'DB overhead tricep extension',d:'One DB held with both hands overhead, lower behind head slowly, extend back up. Keep elbows pointing forward. Monitor left elbow — swap for second pushdown set if any discomfort.',s:'3×10',r:'60s',l:'https://www.youtube.com/results?search_query=dumbbell+overhead+tricep+extension+tutorial',knee:false,safe:false},
+   ],
+   abs:[
+    {id:'cable-crunch',n:'Cable crunch',d:'Kneel at cable stack, rope at top. Hold at ears, crunch down contracting abs — not pulling with arms. Best direct ab exercise for visible definition.',s:'4×15',r:'45s',l:'https://www.youtube.com/results?search_query=cable+crunch+ab+exercise+tutorial',knee:false,safe:false},
+    {id:'hanging-knee',n:'Hanging knee raise',d:'Hang from pull-up bar, bring knees to chest. Controlled — no swinging. Use ab straps (ask at MetroGym) if left elbow uncomfortable.',s:'3×12',r:'45s',l:'https://www.youtube.com/results?search_query=hanging+knee+raise+tutorial',knee:false,safe:false},
+    {id:'ab-wheel',n:'Ab wheel rollout',d:'From knees, roll out as far as control holds, pull back. Substitute with plank 3×45s if no ab wheel.',s:'3×8',r:'45s',l:'https://www.youtube.com/results?search_query=ab+wheel+rollout+tutorial',knee:false,safe:false},
+   ],
    cooldown:[
-    {id:'cable-pushdown',n:'Cable tricep pushdown',d:'Cable stack, rope or bar attachment. Elbows pinned to sides, extend fully. Elbow stays stable — safe for your fracture history. Direct tricep work missing from the rest of the program.',s:'3×12',r:'60s',l:'https://www.youtube.com/results?search_query=cable+tricep+pushdown+tutorial',knee:false,safe:false},
-    {id:'db-overhead-tri',n:'DB overhead tricep extension',d:'One DB held with both hands overhead, lower behind head slowly, extend back up. Keep elbows pointing forward. Monitor left elbow — if any discomfort, replace with a second set of pushdowns.',s:'3×10',r:'60s',l:'https://www.youtube.com/results?search_query=dumbbell+overhead+tricep+extension+tutorial',knee:false,safe:false},
-    {id:'cable-crunch',n:'Cable crunch',d:'Kneel at cable stack, rope attachment at top. Hold rope at ears, crunch down contracting abs — not pulling with arms. Best direct ab exercise for building visible definition.',s:'4×15',r:'45s',l:'https://www.youtube.com/results?search_query=cable+crunch+ab+exercise+tutorial',knee:false,safe:false},
-    {id:'hanging-knee',n:'Hanging knee raise',d:'Hang from pull-up bar, bring knees to chest. Controlled — no swinging. If wrists or left elbow uncomfortable, use ab straps (ask at MetroGym) or do lying leg raises instead.',s:'3×12',r:'45s',l:'https://www.youtube.com/results?search_query=hanging+knee+raise+tutorial',knee:false,safe:false},
-    {id:'ab-wheel',n:'Ab wheel rollout (or plank)',d:'From knees, roll out as far as control holds, pull back. Devastating for the whole core. Substitute: plank 3×45s if no ab wheel available.',s:'3×8',r:'45s',l:'https://www.youtube.com/results?search_query=ab+wheel+rollout+tutorial',knee:false,safe:false},
     {id:'pec-hang',n:'Doorframe pec stretch + passive bar hang',d:'Pec: forearms on frame, lean 45s each side. Hang: fully relax 30s. Spine decompression.',s:'2×45s + 2×30s',r:'',l:'',knee:false,safe:false},
     {id:'z2-bike',n:'Zone 2 bike finisher',d:'10 min easy at conversational pace.',s:'10 min',r:'',l:'',knee:false,safe:false},
     {id:'tke',n:'Terminal knee extension (band)',d:'3×15 daily habit — even upper body days.',s:'3×15',r:'',l:'https://www.youtube.com/results?search_query=terminal+knee+extension+band',knee:false,safe:false},
@@ -707,7 +711,7 @@ evening:[
    ]}
   },
   {day:'Mon',ico:'💪',type:'gym',pill:'Day B',pc:'pg',
-   title:'Day B — upper body + abs + triceps',shift:'Morning free · Work 15→19',sub:'Train 09:00–10:10. Full morning.',
+   title:'Day B — upper body + abs + triceps',shift:'Morning free · Work 15→19',sub:'Upper body · triceps · abs · Zone 2. Train 09:00–10:10.',
    badge:'Gym · ~65 min',bc:'bg-gym',dayKey:'B',
    note:'Evening shift week. Full morning free. Train 09:00 well-fuelled.',
    warmup:[
@@ -724,12 +728,16 @@ evening:[
     {id:'face-pull',n:'Face pull / band pull-apart',d:'Rear delt + rotator cuff.',s:'3×15',r:'45s',l:'https://www.youtube.com/results?search_query=face+pull+rotator+cuff',knee:false,safe:false},
    ],
    core:[],
-   cooldown:[
+   triceps:[
     {id:'cable-pushdown',n:'Cable tricep pushdown',d:'Rope or bar attachment, elbows pinned to sides. Elbow-safe direct tricep work.',s:'3×12',r:'60s',l:'https://www.youtube.com/results?search_query=cable+tricep+pushdown+tutorial',knee:false,safe:false},
     {id:'db-overhead-tri',n:'DB overhead tricep extension',d:'Both hands on one DB overhead, lower behind head, extend up. Monitor left elbow — swap for pushdowns if any discomfort.',s:'3×10',r:'60s',l:'https://www.youtube.com/results?search_query=dumbbell+overhead+tricep+extension+tutorial',knee:false,safe:false},
+   ],
+   abs:[
     {id:'cable-crunch',n:'Cable crunch',d:'Rope at top of cable stack. Kneel, hold at ears, crunch abs down. Best direct ab builder.',s:'4×15',r:'45s',l:'https://www.youtube.com/results?search_query=cable+crunch+ab+exercise+tutorial',knee:false,safe:false},
     {id:'hanging-knee',n:'Hanging knee raise',d:'Hang from pull-up bar, knees to chest. Controlled, no swinging. Use ab straps if needed.',s:'3×12',r:'45s',l:'https://www.youtube.com/results?search_query=hanging+knee+raise+tutorial',knee:false,safe:false},
-    {id:'ab-wheel',n:'Ab wheel rollout (or plank)',d:'From knees, roll out and pull back. Sub: plank 3×45s if no ab wheel.',s:'3×8',r:'45s',l:'https://www.youtube.com/results?search_query=ab+wheel+rollout+tutorial',knee:false,safe:false},
+    {id:'ab-wheel',n:'Ab wheel rollout',d:'From knees, roll out and pull back. Sub: plank 3×45s if no ab wheel.',s:'3×8',r:'45s',l:'https://www.youtube.com/results?search_query=ab+wheel+rollout+tutorial',knee:false,safe:false},
+   ],
+   cooldown:[
     {id:'pec-hang',n:'Pec stretch + passive bar hang',d:'45s pec each side. 30s hang.',s:'2×45s + 2×30s',r:'',l:'',knee:false,safe:false},
     {id:'z2-bike',n:'Zone 2 bike finisher',d:'10 min easy.',s:'10 min',r:'',l:'',knee:false,safe:false},
     {id:'tke',n:'Terminal knee extension (band)',d:'3×15 daily habit.',s:'3×15',r:'',l:'https://www.youtube.com/results?search_query=terminal+knee+extension+band',knee:false,safe:false},
@@ -961,6 +969,8 @@ function renderDetail(i){
   if(d.warmup&&d.warmup.length) train+=exSection(d.warmup,'Warm-up',d.dayKey);
   if(d.main&&d.main.length) train+=exSection(d.main,d.opt?'Options today':'Main block',d.dayKey);
   if(d.core&&d.core.length) train+=exSection(d.core,'Core + mobility',d.dayKey);
+  if(d.triceps&&d.triceps.length) train+=exSection(d.triceps,'Triceps',d.dayKey);
+  if(d.abs&&d.abs.length) train+=exSection(d.abs,'Ab finisher',d.dayKey);
   if(d.cooldown&&d.cooldown.length) train+=exSection(d.cooldown,'Cool-down',d.dayKey);
   if(d.opt){
     train+=`<div class="slbl">What to do today</div>`;
