@@ -1144,8 +1144,8 @@ function renderDetail(i){
   train+=phaseNote(d.dayKey);
   if(d.warmup&&d.warmup.length) train+=exSection(d.warmup,'Warm-up',d.dayKey);
   if(d.main&&d.main.length) train+=exSection(d.main,d.opt?'Options today':'Main block',d.dayKey);
-  // HIIT Timer for Day C
-  if(d.dayKey==='C') train+=hiitHTML();
+  // HIIT Timer for Day A (Sunday — KB complex)
+  if(d.dayKey==='A') train+=hiitHTML();
   if(d.core&&d.core.length) train+=exSection(d.core,'Core + mobility',d.dayKey);
   if(d.triceps&&d.triceps.length) train+=exSection(d.triceps,'Triceps',d.dayKey);
   if(d.abs&&d.abs.length) train+=exSection(d.abs,'Ab finisher',d.dayKey);
