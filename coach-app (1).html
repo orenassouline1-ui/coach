@@ -33,14 +33,11 @@
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:72px}
 
-.topbar{background:var(--card);border-bottom:0.5px solid var(--border2);padding:12px 16px 10px;position:sticky;top:0;z-index:100}
+.topbar{background:var(--card);border-bottom:0.5px solid var(--border2);padding:12px 16px 8px;position:sticky;top:0;z-index:100}
 .topbar-inner{max-width:600px;margin:0 auto}
-.topbar-row1{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.topbar-row1{display:flex;align-items:center;justify-content:space-between;margin-bottom:0px}
 .app-title{font-size:19px;font-weight:700;color:var(--teal);letter-spacing:-0.3px}
 .phase-chip{font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:var(--teal-l);color:var(--teal-d);cursor:pointer}
-.week-toggle{display:flex;background:var(--bg);border-radius:var(--rs);padding:3px;gap:2px}
-.wt{flex:1;padding:6px 8px;border:none;border-radius:var(--rxs);font-size:12px;font-weight:600;cursor:pointer;background:transparent;color:var(--text2);transition:all .15s}
-.wt.on{background:var(--teal);color:#fff}
 
 .phase-bar{max-width:600px;margin:0 auto;padding:10px 16px 0}
 .phase-scroll{display:flex;gap:5px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:3px}
@@ -145,17 +142,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .opt-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px}
 .opt-note{font-size:11px;color:var(--text2);line-height:1.4}
 
-.macro-row{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-bottom:10px}
 .mc{background:var(--bg);border-radius:var(--rs);padding:8px 6px;text-align:center}
-.mc-val{font-size:15px;font-weight:700;color:var(--text)}
-.mc-lbl{font-size:10px;color:var(--text2);margin-top:1px}
-.meal-row{border:0.5px solid var(--border);border-radius:var(--rs);margin-bottom:5px;overflow:hidden;display:grid;grid-template-columns:78px 1fr}
-.meal-tc{background:var(--bg);padding:8px;font-size:11px;font-weight:700;color:var(--text);border-right:0.5px solid var(--border);display:flex;flex-direction:column;justify-content:center}
-.meal-ts{font-size:10px;color:var(--text3);font-weight:400;margin-top:1px}
-.meal-body{padding:8px 10px}
-.meal-title{font-size:12px;font-weight:700;color:var(--text);margin-bottom:2px}
-.meal-items{font-size:11px;color:var(--text2);line-height:1.45}
-.meal-pro{font-size:10px;color:var(--teal-m);font-weight:700;margin-top:3px}
 
 /* SHAKE RECIPES */
 .shake-card{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rs);margin-bottom:6px;overflow:hidden}
@@ -208,6 +195,41 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .inst-text{font-size:12px;color:var(--text2);line-height:1.5}
 .inst-text strong{color:var(--text);font-weight:600}
 
+
+/* WEEKLY TRACKER */
+.tracker-wrap{max-width:600px;margin:10px auto 0;padding:0 16px}
+.tracker-card{background:var(--card);border-radius:12px;border:0.5px solid var(--border2);padding:14px 15px}
+.tracker-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.tracker-title{font-size:14px;font-weight:700;color:var(--text)}
+.streak-badge{display:flex;align-items:center;gap:5px;background:var(--teal-l);border-radius:20px;padding:4px 10px}
+.streak-num{font-size:16px;font-weight:700;color:var(--teal-d)}
+.streak-lbl{font-size:11px;font-weight:600;color:var(--teal-d)}
+.week-days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:10px}
+.wd{border-radius:8px;padding:7px 3px;text-align:center;cursor:pointer;border:1.5px solid var(--border)}
+.wd-name{font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;margin-bottom:3px}
+.wd-ico{font-size:16px;margin-bottom:2px}
+.wd-dot{width:7px;height:7px;border-radius:50%;margin:0 auto;background:var(--border)}
+.wd.done{background:var(--teal-l);border-color:var(--teal)}
+.wd.done .wd-dot{background:var(--teal)}
+.wd.done .wd-name{color:var(--teal-d)}
+.wd.mandatory{border-color:var(--teal-d);border-width:2px}
+.wd.today{border-color:var(--amber);border-width:2px}
+.tracker-progress{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.tp-bar-wrap{flex:1;height:6px;background:var(--bg);border-radius:3px;overflow:hidden}
+.tp-bar{height:100%;border-radius:3px;background:var(--teal);transition:width .4s}
+.tp-text{font-size:11px;font-weight:700;color:var(--teal-d);white-space:nowrap}
+.tracker-msg{font-size:12px;color:var(--text2);line-height:1.4;padding:7px 10px;background:var(--bg);border-radius:5px}
+.log-btn{width:100%;margin-top:8px;padding:9px;background:var(--teal);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer}
+.log-btn.logged{background:var(--gray-l);color:var(--gray-d)}
+.history-row{display:flex;align-items:center;gap:8px;margin-top:10px;padding-top:10px;border-top:0.5px solid var(--border);overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.history-row::-webkit-scrollbar{display:none}
+.hw{flex-shrink:0;text-align:center;padding:5px 8px;border-radius:5px;background:var(--bg)}
+.hw-label{font-size:9px;color:var(--text3);font-weight:600;margin-bottom:3px}
+.hw-val{font-size:13px;font-weight:700}
+.hw-val.full{color:var(--teal)}
+.hw-val.partial{color:var(--amber)}
+.hw-val.miss{color:var(--red-d)}
+
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:0.5px solid var(--border2);display:flex;z-index:200;padding-bottom:env(safe-area-inset-bottom)}
 .nav-btn{flex:1;padding:9px 4px 7px;border:none;background:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;color:var(--text3);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
 .nav-btn.on{color:var(--teal)}
@@ -233,15 +255,30 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <div class="app-title">My Coach 🏋️</div>
       <div class="phase-chip" id="top-phase" onclick="showScreen('phases',document.getElementById('nav-phases'))"></div>
     </div>
-    <div class="week-toggle">
-      <button class="wt on" onclick="setWeek('regular',this)">Regular week</button>
-      <button class="wt" onclick="setWeek('evening',this)">Evening shift week</button>
-    </div>
+
   </div>
 </div>
 
 <div class="elbow-bar">
   <div class="elbow-notice">⚠️ <div><strong>Elbow protocol active:</strong> No clean catch, no renegade row. Push press from rack + bench row throughout. Monitor left elbow on all pressing movements.</div></div>
+</div>
+
+
+<div class="tracker-wrap" id="tracker-wrap">
+  <div class="tracker-card">
+    <div class="tracker-top">
+      <div class="tracker-title">This week</div>
+      <div class="streak-badge"><div class="streak-num" id="streak-num">0</div><div class="streak-lbl">🔥 week streak</div></div>
+    </div>
+    <div class="week-days" id="week-days"></div>
+    <div class="tracker-progress">
+      <div class="tp-bar-wrap"><div class="tp-bar" id="tp-bar" style="width:0%"></div></div>
+      <div class="tp-text" id="tp-text">0 / 3</div>
+    </div>
+    <div class="tracker-msg" id="tracker-msg"></div>
+    <button class="log-btn" id="log-today-btn" onclick="logTodaySession()">✓ Log today's session</button>
+    <div class="history-row" id="history-row"></div>
+  </div>
 </div>
 
 <div class="screen on" id="screen-home">
@@ -350,7 +387,7 @@ const PHASES=[
    changes:[
      {day:'Day A',text:'<strong>5 rounds</strong>, add push-press leg drive. HIIT: <strong>12×(15s max/35s rest)</strong>. Curl explosive.'},
      {day:'Day B',text:'DB bench all sets. Pull-up: <strong>2s pause at top</strong>. Add incline DB press 3×10.'},
-     {day:'Day C',text:'Goblet squat <strong>4×6 heavier</strong>, explode up. Add KB sumo deadlift 3×8. Step-up: add KB hold.'},
+     {day:'Day C',text:'Goblet squat <strong>4×6 heavier</strong>, explode up. Add KB sumo deadlift 3×8. Leg press: increase weight and reduce rest to 60s.'},
      {day:'Day D',text:'CARs hanging from bar. Bretzel +10s hold. Nordic 3×6.'},
    ]
   },
@@ -574,77 +611,6 @@ function hiitAdj(type,delta){
   document.getElementById('hiit-progress').textContent=`Round 1 of ${hiitState.totalRounds}`;
 }
 
-// ═══ SHAKE RECIPES ════════════════════════════════════════════
-const SHAKES={
-  training_pre:[
-    {ico:'⚡',name:'Mango banana rocket',tag:'Pre-train',tagColor:'var(--amber-l)',tagText:'var(--amber-d)',
-     ings:[['🥭','Frozen mango','100g'],['🍌','Banana','1'],['🥤','Vanilla whey','1 scoop'],['💧','Water','250ml'],['🌾','Rolled oats','25g']]},
-    {ico:'☕',name:'Pineapple coffee kick',tag:'Pre-train',tagColor:'var(--amber-l)',tagText:'var(--amber-d)',
-     ings:[['🍍','Frozen pineapple','80g'],['☕','Cold brew','100ml'],['🥤','Vanilla whey','1 scoop'],['💧','Water','150ml'],['🍌','Banana','½']]},
-    {ico:'🥭',name:'Mango passion pre-swim',tag:'Pre-train',tagColor:'var(--amber-l)',tagText:'var(--amber-d)',
-     tip:'Light on stomach — best before swimming',
-     ings:[['🥭','Frozen mango','80g'],['🍋','Frozen passion fruit','60g'],['🥤','Vanilla whey','1 scoop'],['💧','Water','280ml'],['🍋','Lemon juice','½ lemon']]},
-  ],
-  training_post:[
-    {ico:'🍓',name:'Strawberry peanut recovery',tag:'Post-train',tagColor:'var(--purple-l)',tagText:'var(--purple-d)',
-     tip:'Strawberry Vit C supports knee collagen repair',
-     ings:[['🍓','Frozen strawberries','120g'],['🥤','Vanilla whey','1 scoop'],['🥜','Peanut butter (pareve)','1 tbsp'],['🍌','Banana','1'],['💧','Water','250ml']]},
-    {ico:'🫐',name:'Blueberry antioxidant recovery',tag:'Post-train',tagColor:'var(--purple-l)',tagText:'var(--purple-d)',
-     tip:'Best after Day C or football — highest antioxidants',
-     ings:[['🫐','Frozen blueberries','120g'],['🥤','Vanilla whey','1 scoop'],['🍌','Banana','1'],['💧','Water','270ml'],['🌿','Spinach','handful']]},
-    {ico:'🍍',name:'Tropical recovery',tag:'Post-train',tagColor:'var(--purple-l)',tagText:'var(--purple-d)',
-     ings:[['🍍','Frozen pineapple','80g'],['🥭','Frozen mango','80g'],['🍋','Frozen passion fruit','40g'],['🥤','Vanilla whey','1 scoop'],['💧','Water','250ml']]},
-  ],
-  rest:[
-    {ico:'🍓',name:'Mixed berry morning',tag:'Pareve',tagColor:'var(--teal-l)',tagText:'var(--teal-d)',
-     ings:[['🍓','Frozen strawberries','80g'],['🫐','Frozen blueberries','60g'],['🥤','Vanilla whey','1 scoop'],['🌰','Almond milk','280ml'],['🍌','Banana','½']]},
-    {ico:'🍋',name:'Passion fruit mango detox',tag:'Pareve',tagColor:'var(--teal-l)',tagText:'var(--teal-d)',
-     ings:[['🍋','Frozen passion fruit','80g'],['🥭','Frozen mango','60g'],['🥤','Vanilla whey','1 scoop'],['💧','Water','280ml'],['🍋','Lemon juice','½ lemon']]},
-    {ico:'🍍',name:'Pineapple green shake',tag:'Pareve',tagColor:'var(--teal-l)',tagText:'var(--teal-d)',
-     tip:'Pineapple bromelain = anti-inflammatory',
-     ings:[['🍍','Frozen pineapple','100g'],['🥤','Vanilla whey','1 scoop'],['🌰','Almond milk','250ml'],['🌿','Spinach','handful'],['🍌','Banana','½']]},
-  ],
-  dairy:[
-    {ico:'🍓',name:'Strawberry milkshake',tag:'Dairy only',tagColor:'var(--blue-l)',tagText:'var(--blue-d)',
-     tip:'Best-tasting shake — Tuesday treat only',
-     ings:[['🍓','Frozen strawberries','150g'],['🥤','Vanilla whey','1 scoop'],['🥛','Kosher cold milk','300ml'],['🍯','Honey (optional)','1 tsp']]},
-    {ico:'🥭',name:'Mango passion lassi',tag:'Dairy only',tagColor:'var(--blue-l)',tagText:'var(--blue-d)',
-     ings:[['🥭','Frozen mango','120g'],['🍋','Frozen passion fruit','50g'],['🥤','Vanilla whey','1 scoop'],['🥛','Kosher milk','250ml']]},
-    {ico:'🫐',name:'Yogurt berry bowl',tag:'Dairy only',tagColor:'var(--blue-l)',tagText:'var(--blue-d)',
-     tip:'Eat with a spoon — 48g protein in one bowl',
-     ings:[['🫙','Origine protein yogurt','1 pot'],['🥤','Vanilla whey','1 scoop'],['🫐','Frozen blueberries','80g'],['🍍','Frozen pineapple','50g'],['🥛','Milk splash','50ml'],['🌾','Granola on top','20g']]},
-  ],
-};
-
-function shakesHTML(type){
-  const recipes=SHAKES[type]||[];
-  if(!recipes.length) return '';
-  let h=`<div class="slbl">🥤 Shake recipes</div>`;
-  recipes.forEach((r,i)=>{
-    const key=`shake_${type}_${i}`;
-    h+=`<div class="shake-card">
-      <div class="shake-header" onclick="toggleShake('${key}')">
-        <div class="shake-ico">${r.ico}</div>
-        <div class="shake-name">${r.name}</div>
-        <div class="shake-tag" style="background:${r.tagColor};color:${r.tagText}">${r.tag}</div>
-        <div class="shake-chev" id="sc_${key}">▾</div>
-      </div>
-      <div class="shake-body" id="sb_${key}">
-        ${r.ings.map(([e,n,a])=>`<div class="shake-ing"><div class="shake-ing-e">${e}</div><div class="shake-ing-n">${n}</div><div class="shake-ing-a">${a}</div></div>`).join('')}
-        ${r.tip?`<div class="shake-tip">💡 ${r.tip}</div>`:''}
-      </div>
-    </div>`;
-  });
-  return h;
-}
-function toggleShake(key){
-  const body=document.getElementById('sb_'+key);
-  const chev=document.getElementById('sc_'+key);
-  if(!body) return;
-  const open=body.classList.toggle('open');
-  if(chev) chev.classList.toggle('open',open);
-}
-
 // ═══ DAYS DATA ════════════════════════════════════════════════
 const DAYS={
 regular:[
@@ -654,7 +620,6 @@ regular:[
    shift:'Day off — premium slot',sub:'Freshest day of the week. Hardest session. Train 08:30–10:00.',
    badge:'Gym · ~60 min',bc:'bg-gym',dayKey:'A',wfh:false,
    note:'Sunday = your best training slot. Most rested, no time pressure, no shift. Day A (hardest) goes here — KB complex + HIIT timer below.',
-   shakeType:'training_pre',
    warmup:[
     {id:'bike-wu',n:'Stationary bike — easy',d:'5 min low resistance. Knee prep.',s:'5 min',r:'',l:'',knee:false,safe:false},
     {id:'bear-crawl',n:'Bear crawl',d:'20m forward + back. Full body activation, zero knee impact. Replaces jump rope.',s:'2 lengths',r:'',l:'https://www.youtube.com/results?search_query=bear+crawl+exercise+tutorial',knee:false,safe:false},
@@ -668,22 +633,14 @@ regular:[
     {id:'bear-hold',n:'Bear crawl hold',d:'All-fours, knees 2cm off floor, hold 25s. Back flat, hips level, core braced.',s:'4×25s',r:'30s',l:'https://www.youtube.com/results?search_query=bear+crawl+hold+stability+exercise',knee:false,safe:false},
     {id:'tke',n:'Terminal knee extension (band)',d:'3×15 right knee. End every session with this.',s:'3×15',r:'',l:'https://www.youtube.com/results?search_query=terminal+knee+extension+band',knee:false,safe:false},
    ],
-   cooldown:[],opt:null,
-   meals:{type:'training',kcal:2750,prot:175,carbs:310,fat:75,items:[
-    {t:'08:00',s:'Pre-train',h:'Yogurt + creatine',f:'1 protein yogurt + banana + 5g creatine',p:'~22g protein'},
-    {t:'10:30',s:'Post-train',h:'Second yogurt',f:'1 protein yogurt + oats or rice cakes',p:'~22g protein'},
-    {t:'13:00',s:'Lunch',h:'Athlete plate',f:'200g chicken + 160g rice + Israeli salad + olive oil',p:'~48g protein'},
-    {t:'16:00',s:'Afternoon',h:'Protein shake',f:'1 scoop protein + apple',p:'~25g protein'},
-    {t:'19:30',s:'Dinner',h:'Salmon recovery',f:'180g salmon + 200g sweet potato + broccoli + olive oil',p:'~40g protein · total ~157g'},
-   ]}
+   cooldown:[],opt:null
   },
   // MONDAY — Day B
   {day:'Mon',ico:'💪',type:'gym',pill:'Day B',pc:'pg',
    title:'Day B — upper body + abs + triceps',
-   shift:'8→17 / 9→18 / 10→19',sub:'After work (8→17: 17:45 · 9→18: 18:30) or before (10→19: 07:30).',
+   shift:'09→18',sub:'Train after work — 18:30 onwards. Or WFH day: flexible timing.',
    badge:'Gym · ~55 min',bc:'bg-gym',dayKey:'B',wfh:false,
-   note:'Upper body — chest, back, shoulders, biceps, triceps, abs. Balanced push/pull/arms. Push press from rack — no clean motion. Elbow-safe throughout.',
-   shakeType:'training_post',
+   note:'Upper body — chest, back, shoulders, biceps, triceps, abs. Train after work at 18:30. Push press from rack only — no clean motion. Elbow-safe.',
    warmup:[
     {id:'bike-wu',n:'Stationary bike — easy',d:'5 min.',s:'5 min',r:'',l:'',knee:false,safe:false},
     {id:'kb-halo',n:'KB Halo',d:'Circle KB around head, 8 each direction.',s:'2×8/dir',r:'',l:'https://www.youtube.com/results?search_query=kettlebell+halo+shoulder+warmup',knee:false,safe:false},
@@ -710,64 +667,50 @@ regular:[
     {id:'z2-bike',n:'Zone 2 bike finisher',d:'10 min easy conversational pace.',s:'10 min',r:'',l:'',knee:false,safe:false},
     {id:'tke',n:'Terminal knee extension (band)',d:'3×15 daily habit.',s:'3×15',r:'',l:'https://www.youtube.com/results?search_query=terminal+knee+extension+band',knee:false,safe:false},
    ],
-   opt:null,
-   meals:{type:'training',kcal:2750,prot:175,carbs:310,fat:75,items:[
-    {t:'Work',s:'~8:30',h:'Yogurt + creatine',f:'1 protein yogurt + banana + 5g creatine',p:'~22g protein'},
-    {t:'11:00',s:'Work',h:'Second yogurt',f:'1 protein yogurt + oats',p:'~22g protein'},
-    {t:'13:00',s:'Lunch',h:'Fish plate',f:'180g baked cod or 160g tuna + 150g bulgur + salad + tahini',p:'~40g protein'},
-    {t:'Pre-train',s:'~17:00',h:'Shake + fast carbs',f:'1 scoop protein shake + 3 dates',p:'~25g protein'},
-    {t:'20:00',s:'Dinner',h:'Chicken recovery',f:'200g chicken thigh + sweet potato + asparagus + olive oil',p:'~46g protein · total ~155g'},
-   ]}
+   opt:null
   },
   // TUESDAY — Rest/Sport
   {day:'Tue',ico:'🏊',type:'rest',pill:'Optional',pc:'pr',
    title:'Tuesday — optional swim / sport',
-   shift:'8→17 / 9→18 / 10→19',sub:'Swim, basketball or football only. Not a gym day.',
+   shift:'09→18',sub:'Swim, basketball or football only if you feel good. Not a gym day.',
    badge:'Optional sport',bc:'bg-rest',dayKey:null,wfh:false,
    note:'3 mandatory sessions are Sun/Mon/Thu. Tuesday is a bonus only — swimming, basketball or football if you feel like it. No gym, no pressure.',
-   shakeType:'rest',
    warmup:[],main:[],core:[],cooldown:[],triceps:[],abs:[],
    opt:[
     {title:'🏊 Swimming — 30–40 min easy',note:'Best Tuesday option. Zone 2 pace, knee-friendly, active recovery.'},
     {title:'🏀 Basketball or football',note:'If a game or training session comes up — go for it.'},
     {title:'🚶 Walk only',note:'If the body is tired after Sunday + Monday. 20–30 min, that is all.'},
     {title:'Rest completely',note:'Also valid. 3 mandatory sessions are done. Tuesday is yours.'},
-   ],
-   meals:{type:'rest',kcal:2500,prot:165,carbs:270,fat:70,items:[
-    {t:'Work',s:'~8:30',h:'First yogurt',f:'1 protein yogurt + apple',p:'~22g protein'},
-    {t:'11:00',s:'Work',h:'Second yogurt',f:'1 protein yogurt + rice cakes',p:'~22g protein'},
-    {t:'13:00',s:'Lunch',h:'Tuna salad',f:'160g tuna + cucumber, tomato, corn, olive oil + pita',p:'~36g protein'},
-    {t:'16:00',s:'Snack',h:'Protein shake',f:'1 scoop + 1 pear',p:'~25g protein'},
-    {t:'19:30',s:'Dinner',h:'Turkey + quinoa',f:'200g turkey + 150g quinoa + roasted peppers + olive oil',p:'~44g protein · total ~149g'},
-   ]}
+   ]
   },
   // WEDNESDAY — Blocked
-  {day:'Wed',ico:'📚',type:'blocked',pill:'Blocked',pc:'pb',
-   title:'Wednesday — PM course',
-   shift:'8→17 · Course 18→21',sub:'No gym window. Work + study day.',
-   badge:'Blocked',bc:'bg-blocked',dayKey:null,wfh:false,
-   note:'Always blocked. Work 08→17 then course 18→21. Planned rest day.',
-   shakeType:'rest',
-   warmup:[],main:[],core:[],cooldown:[],triceps:[],abs:[],
-   opt:[
-    {title:'Terminal knee extension (band)',note:'3×15 at home. 3 minutes.'},
-    {title:'10 min walk to/from course',note:"Active commute. That's all."},
+  {day:'Wed',ico:'🧘',type:'optional',pill:'Optional',pc:'po',
+   title:'Wednesday — mobility or sport',
+   shift:'09→18',sub:'Evening free. Day D mobility, sport, or rest.',
+   badge:'Optional',bc:'bg-opt',dayKey:'D',wfh:false,
+   note:'Course is done — Wednesday evening is free. Use it for Day D mobility + knee rehab, a sport session, or full rest. Nothing mandatory here.',
+   warmup:[],core:[],cooldown:[],triceps:[],abs:[],
+   main:[
+    {id:'cars-full',n:'Hip + shoulder CARs',d:'2×5/joint. Full range, maximum slowness. Best thing for long-term joint health.',s:'2×5/joint',r:'',l:'https://www.youtube.com/results?search_query=CARs+controlled+articular+rotation',knee:false,safe:false},
+    {id:'deep-squat',n:'Deep squat breathing hold',d:'Hold bottom position, 5 slow breaths. Improves ankle and hip mobility over time.',s:'3×60s',r:'',l:'https://www.youtube.com/results?search_query=deep+squat+hold+mobility',knee:false,safe:false},
+    {id:'bretzel',n:'Bretzel stretch',d:'Lie on side, stack knees. Top hand grabs top foot. Hip flexor + thoracic combo.',s:'2×60s/side',r:'',l:'https://www.youtube.com/results?search_query=bretzel+stretch+tutorial',knee:false,safe:false},
+    {id:'bear-hold',n:'Bear crawl hold',d:'All-fours, knees 2cm off floor, hold 25s. Back flat, hips level, core braced.',s:'3×25s',r:'30s',l:'https://www.youtube.com/results?search_query=bear+crawl+hold+stability',knee:false,safe:false},
+    {id:'y-balance',n:'Y-balance single-leg reach',d:'3 directions per side. Right leg focus. Best proprioception drill for your knee history.',s:'3×5/side',r:'',l:'https://www.youtube.com/results?search_query=Y+balance+ankle+stability',knee:false,safe:false},
+    {id:'pallof',n:'Pallof press',d:'Cable or band anchored to side. Press straight out, hold 2s. Anti-rotation core.',s:'3×10/side',r:'45s',l:'https://www.youtube.com/results?search_query=pallof+press+anti+rotation',knee:false,safe:false},
+    {id:'nordic-curl',n:'Nordic curl — eccentric',d:'Lower as slowly as possible. Left leg only if right knee flags.',s:'3×5',r:'90s',l:'https://www.youtube.com/results?search_query=nordic+curl+eccentric+tutorial',knee:false,safe:false},
+    {id:'tke',n:'Terminal knee extension (band)',d:'3×15 right knee. Daily habit.',s:'3×15',r:'',l:'https://www.youtube.com/results?search_query=terminal+knee+extension+band',knee:false,safe:false},
    ],
-   meals:{type:'rest',kcal:2500,prot:165,carbs:270,fat:70,items:[
-    {t:'Work',s:'~8:30',h:'Yogurt + creatine',f:'1 protein yogurt + banana + 5g creatine',p:'~22g protein'},
-    {t:'11:00',s:'Work',h:'Second yogurt',f:'1 protein yogurt + fruit',p:'~22g protein'},
-    {t:'13:00',s:'Lunch',h:'Fish lunch',f:'180g cod or tuna + rice + salad.',p:'~38g protein'},
-    {t:'17:15',s:'Pre-course',h:'Shake before course',f:'1 scoop protein shake + rice cake.',p:'~25g protein'},
-    {t:'21:15',s:'Post-course',h:'Light dinner',f:'3 eggs + 2 rice cakes + cucumber.',p:'~22g protein · total ~129g'},
-   ]}
+   opt:[
+    {title:'🏊 Swim instead',note:'30–40 min easy swim replaces this entire block. Counts as session 4.'},
+    {title:'🏀 Basketball or football',note:'If something is on — go. Sport counts as session 4.'},
+    {title:'😴 Full rest',note:'Also valid. 3 mandatory sessions done. Wednesday is yours.'},
+   ],
   },
-  // THURSDAY — Day A (WFH)
   {day:'Thu',ico:'🏋️',type:'gym',pill:'Day C',pc:'pg',
    title:'Day C — lower body',
    shift:'🏠 Work from home · flexible timing',sub:'Train whenever works — morning preferred.',
-   badge:'Gym · ~50 min',bc:'bg-gym',dayKey:'C',wfh:true,
-   note:'WFH day — flexible timing. Morning preferred. Lower body: fully recovered from Sunday KB complex.',
-   shakeType:'training_post',
+   badge:'Gym · ~55 min',bc:'bg-gym',dayKey:'C',wfh:true,
+   note:'WFH day — lower body. Lateral lunge and step-up replaced with sumo squat and leg press — knee-safe substitutes. Bike HIIT finisher added for fat loss and conditioning.',
    warmup:[
     {id:'bike-wu',n:'Stationary bike — easy',d:'5 min. Knee prep. Non-negotiable every session.',s:'5 min',r:'',l:'',knee:false,safe:false},
     {id:'hip9090',n:'Hip 90/90 rotations',d:'Sit on floor, rotate both knees side to side, hold 2s each end.',s:'2×10/side',r:'',l:'https://www.youtube.com/results?search_query=hip+90+90+rotation+mobility',knee:false,safe:false},
@@ -776,9 +719,9 @@ regular:[
    main:[
     {id:'goblet-squat',n:'KB Goblet squat',d:'Hold KB at chest. Pain-free depth only. Pause 1s at bottom.',s:'4×8',r:'90s',l:'https://www.youtube.com/results?search_query=kettlebell+goblet+squat+tutorial',knee:false,safe:false},
     {id:'sl-rdl',n:'KB Single-leg RDL',d:'Left leg first. Right leg: light KB, shorter range. Rebuilds hamstring + glute control.',s:'3×8/side',r:'75s',l:'https://www.youtube.com/results?search_query=single+leg+RDL+kettlebell+tutorial',knee:false,safe:true},
-    {id:'lat-lunge',n:'Lateral lunge — reduced range',d:'50% range only. Wide step, sit slightly into hip.',s:'3×8/side',r:'60s',l:'https://www.youtube.com/results?search_query=lateral+lunge+modified+knee',knee:true,safe:false},
+    {id:'sumo-squat',n:'KB Sumo squat',d:'Wide stance, toes out ~45°. Hold KB between legs, sit deep. Bilateral loading — zero lateral knee stress. Directly replaces lateral lunge.',s:'3×12',r:'60s',l:'https://www.youtube.com/results?search_query=kettlebell+sumo+squat+tutorial',knee:false,safe:true},
     {id:'kb-swing',n:'KB Swing',d:'Hip hinge — NOT a squat. Maximum hip drive. Best movement for knee stability.',s:'4×15',r:'60s',l:'https://www.youtube.com/results?search_query=kettlebell+swing+hip+hinge+tutorial',knee:false,safe:true},
-    {id:'step-up',n:'Step-up to balance',d:'Step onto box, drive through heel, hold 2s at top. Zero landing impact.',s:'3×8/side',r:'75s',l:'https://www.youtube.com/results?search_query=step+up+to+balance+exercise+tutorial',knee:true,safe:false},
+    {id:'leg-press',n:'Leg press — low foot placement',d:'Feet low and shoulder-width on the plate. Full controlled range. Best quad builder for your knee — bilateral, no balance demand, zero lateral stress. If no leg press: seated leg extension 3×15.',s:'4×10',r:'75s',l:'https://www.youtube.com/results?search_query=leg+press+low+foot+placement+tutorial',knee:false,safe:true},
    ],
    core:[
     {id:'kb-dl-hold',n:'Single-arm KB deadlift hold',d:'KB beside foot. Hinge, stand tall, hold 40s. Shoulders level, no side lean. No space needed.',s:'3×40s/side',r:'45s',l:'https://www.youtube.com/results?search_query=single+arm+kettlebell+deadlift+tutorial',knee:false,safe:false},
@@ -786,18 +729,12 @@ regular:[
    ],
    triceps:[],abs:[],
    cooldown:[
+    {id:'thu-bike-hiit',n:'Bike HIIT finisher — 8 rounds',d:'20s max effort, 40s easy recovery × 8 rounds. Second weekly conditioning hit for fat loss and athletic performance. Knee-safe cardio.',s:'8 rounds',r:'40s easy',l:'https://www.youtube.com/results?search_query=stationary+bike+HIIT+intervals',knee:false,safe:true},
     {id:'pigeon',n:'Pigeon pose',d:'Front shin parallel to mat, lean forward. Releases glute + IT band tension.',s:'2×60s/side',r:'',l:'https://www.youtube.com/results?search_query=pigeon+pose+tutorial',knee:false,safe:false},
     {id:'quad-ham',n:'Quad + hamstring stretch',d:'Standing quad hold + lying hamstring pull.',s:'2×45s each',r:'',l:'https://www.youtube.com/results?search_query=quad+hamstring+stretch',knee:false,safe:false},
     {id:'tke',n:'Terminal knee extension (band)',d:'VMO rehab — do this daily even off gym days.',s:'3×15',r:'',l:'https://www.youtube.com/results?search_query=terminal+knee+extension+band+rehab',knee:false,safe:false},
    ],
-   opt:null,
-   meals:{type:'training',kcal:2750,prot:175,carbs:310,fat:75,items:[
-    {t:'Morning',s:'WFH',h:'First yogurt + creatine',f:'1 protein yogurt + banana + 5g creatine',p:'~22g protein'},
-    {t:'Mid-morning',s:'WFH',h:'Second yogurt',f:'1 protein yogurt + oats',p:'~22g protein'},
-    {t:'13:00',s:'Lunch',h:'Chicken or beef plate',f:'200g chicken or 180g lean beef + 160g rice + salad + olive oil',p:'~46g protein'},
-    {t:'Pre-train',s:'Flexible',h:'Shake + dates',f:'1 scoop protein shake + 3 dates',p:'~25g protein'},
-    {t:'Dinner',s:'Evening',h:'Turkey stir-fry',f:'200g turkey mince + rice noodles + broccoli + soy sauce',p:'~44g protein · total ~159g'},
-   ]}
+   opt:null
   },
   // FRIDAY — Day D optional (WFH)
   {day:'Fri',ico:'🌙',type:'optional',pill:'Light mobility',pc:'po',
@@ -805,7 +742,6 @@ regular:[
    shift:'🏠 Work from home · No sport',sub:'15–20 min only. At home, no gym needed.',
    badge:'Home mobility',bc:'bg-opt',dayKey:null,wfh:true,
    note:'Friday is not a training day. 3 mandatory sessions done (Sun/Mon/Thu). Friday = 15–20 min of light mobility at home. No gym, no effort, no pressure. Just keep the body mobile before Shabbat.',
-   shakeType:'rest',
    warmup:[],core:[],cooldown:[],triceps:[],abs:[],
    main:[
     {id:'hip9090',n:'Hip 90/90 rotations',d:'Sit on floor, rotate knees side to side. 2s hold each end. Do this in the living room.',s:'2×10/side',r:'',l:'https://www.youtube.com/results?search_query=hip+90+90+rotation+mobility',knee:false,safe:false},
@@ -813,13 +749,7 @@ regular:[
     {id:'deep-squat',n:'Deep squat hold',d:'Hold the bottom of a squat, 5 slow breaths. Heels elevated on a book if needed.',s:'2×60s',r:'',l:'https://www.youtube.com/results?search_query=deep+squat+hold+mobility',knee:false,safe:false},
     {id:'tke',n:'Terminal knee extension (band)',d:'Daily knee habit. Light band, 3×15 right knee. 3 minutes.',s:'3×15',r:'',l:'https://www.youtube.com/results?search_query=terminal+knee+extension+band',knee:false,safe:false},
    ],
-   opt:null,
-   meals:{type:'rest',kcal:2500,prot:160,carbs:265,fat:68,items:[
-    {t:'Morning',s:'WFH',h:'First yogurt + creatine',f:'1 protein yogurt + banana + 5g creatine',p:'~22g protein'},
-    {t:'Mid-morning',s:'WFH',h:'Second yogurt',f:'1 protein yogurt + fruit',p:'~22g protein'},
-    {t:'13:00',s:'Lunch',h:'Tuna or fish plate',f:'200g chicken or 180g tuna + rice + salad.',p:'~42g protein'},
-    {t:'19:30',s:'Shabbat dinner',h:'Shabbat meal',f:'Traditional — chicken/fish/meat + challah + salads. Enjoy.',p:'~50g+ · total ~140g+'},
-   ]}
+   opt:null
   },
   // SATURDAY — Shabbat
   {day:'Sat',ico:'✡️',type:'shabbat',pill:'Shabbat',pc:'ps',
@@ -827,210 +757,15 @@ regular:[
    shift:'No training · No sport',sub:'Walk, eat, recover.',
    badge:'Shabbat',bc:'bg-shabbat',dayKey:null,wfh:false,
    note:'Full rest. No gym, no sport. Shabbat walk (30–45 min) only.',
-   shakeType:'dairy',
    warmup:[],main:[],core:[],cooldown:[],triceps:[],abs:[],
-   opt:[{title:'Shabbat walk — 30–45 min',note:'Comfortable pace. Recovery, not exercise.'}],
-   meals:{type:'shabbat',kcal:2600,prot:155,carbs:280,fat:72,items:[
-    {t:'Morning',s:'',h:'Light morning',f:'Eggs + bread + salads',p:'~25–30g protein'},
-    {t:'Lunch',s:'Shabbat',h:'Main Shabbat meal',f:'Full traditional. Eat fully. No tracking.',p:'~50g+ protein'},
-    {t:'Afternoon',s:'Shalosh seudos',h:'Third meal',f:'Bread + salads + tuna or eggs.',p:'~20g protein'},
-   ]}
-  },
-],
-evening:[
-  // SUNDAY — Day C (same logic)
-  {day:'Sun',ico:'🔥',type:'gym',pill:'Day A',pc:'pg',
-   title:'Day A — full body KB complex + HIIT',
-   shift:'Day off — premium slot',sub:'Always Day A on Sunday. Train 08:30–10:00.',
-   badge:'Gym · ~60 min',bc:'bg-gym',dayKey:'A',wfh:false,
-   note:'Sunday always = Day A. Same premium slot regardless of shift week.',
-   shakeType:'training_pre',
-   warmup:[
-    {id:'bike-wu',n:'Stationary bike — easy',d:'5 min. Knee prep.',s:'5 min',r:'',l:'',knee:false,safe:false},
-    {id:'bear-crawl',n:'Bear crawl',d:'20m forward + back.',s:'2 lengths',r:'',l:'https://www.youtube.com/results?search_query=bear+crawl+exercise+tutorial',knee:false,safe:false},
-   ],
-   main:[
-    {id:'kb-complex',n:'KB complex — 5 exercises',d:'No rest within round, 90s between.\n1. Push press (5/side)\n2. Front squat (5)\n3. KB curl (8)\n4. Swing (10)\n5. Single-arm row from bench (5/side)',s:'4 rounds',r:'90s',l:'https://www.youtube.com/results?search_query=kettlebell+complex+workout+tutorial',knee:false,safe:false},
-   ],
-   core:[
-    {id:'hip-cars',n:'Hip CARs',d:'2×5/side.',s:'2×5/side',r:'',l:'https://www.youtube.com/results?search_query=hip+CAR+mobility',knee:false,safe:false},
-    {id:'bretzel',n:'Bretzel stretch',d:'2×60s/side.',s:'2×60s/side',r:'',l:'https://www.youtube.com/results?search_query=bretzel+stretch+tutorial',knee:false,safe:false},
-    {id:'bear-hold',n:'Bear crawl hold',d:'All-fours, knees 2cm off floor, hold 25s.',s:'4×25s',r:'30s',l:'https://www.youtube.com/results?search_query=bear+crawl+hold+stability+exercise',knee:false,safe:false},
-    {id:'tke',n:'Terminal knee extension (band)',d:'3×15 right knee.',s:'3×15',r:'',l:'https://www.youtube.com/results?search_query=terminal+knee+extension+band',knee:false,safe:false},
-   ],
-   cooldown:[],triceps:[],abs:[],opt:null,
-   meals:{type:'training',kcal:2750,prot:175,carbs:310,fat:75,items:[
-    {t:'08:00',s:'Pre-train',h:'Yogurt + creatine',f:'1 protein yogurt + banana + 5g creatine',p:'~22g protein'},
-    {t:'10:30',s:'Post-train',h:'Second yogurt',f:'1 protein yogurt + oats',p:'~22g protein'},
-    {t:'13:00',s:'Lunch',h:'Athlete plate',f:'200g chicken + 160g rice + Israeli salad + olive oil',p:'~48g protein'},
-    {t:'16:00',s:'Afternoon',h:'Protein shake',f:'1 scoop protein + apple',p:'~25g protein'},
-    {t:'19:30',s:'Dinner',h:'Salmon recovery',f:'180g salmon + 200g sweet potato + broccoli + olive oil',p:'~40g protein · total ~157g'},
-   ]}
-  },
-  // MONDAY — Day B (morning free)
-  {day:'Mon',ico:'💪',type:'gym',pill:'Day B',pc:'pg',
-   title:'Day B — upper body + abs + triceps',
-   shift:'Morning free · Work 15→19',sub:'Train 09:00–10:10. Full morning, no rush.',
-   badge:'Gym · ~55 min',bc:'bg-gym',dayKey:'B',wfh:false,
-   note:'Evening shift week. Full morning free. Balanced upper body — chest, back, shoulders, biceps, triceps, abs. No clean motion on push press.',
-   shakeType:'training_post',
-   warmup:[
-    {id:'bike-wu',n:'Stationary bike — easy',d:'5 min.',s:'5 min',r:'',l:'',knee:false,safe:false},
-    {id:'kb-halo',n:'KB Halo',d:'8 each direction.',s:'2×8/dir',r:'',l:'https://www.youtube.com/results?search_query=kettlebell+halo+shoulder+warmup',knee:false,safe:false},
-    {id:'thor-rot',n:'Thoracic rotation',d:'10/side.',s:'10/side',r:'',l:'https://www.youtube.com/results?search_query=thoracic+rotation+mobility',knee:false,safe:false},
-   ],
-   main:[
-    {id:'bench-press',n:'Bench press (barbell or DB)',d:'Scapulae retracted, feet flat, full ROM. DB allows natural rotation — better for shoulder health.',s:'4×8',r:'90s',l:'https://www.youtube.com/results?search_query=bench+press+proper+form+tutorial',knee:false,safe:false},
-    {id:'incline-db-press',n:'Incline DB press',d:'Bench at 30–45°. Press DBs up and slightly inward. Upper chest focus. More chest variety than flat bench alone.',s:'3×10',r:'75s',l:'https://www.youtube.com/results?search_query=incline+dumbbell+press+tutorial',knee:false,safe:false},
-    {id:'pull-up',n:'Pull-up',d:'Dead hang start, full pull. Use band assistance if needed.',s:'4×6–8',r:'90s',l:'https://www.youtube.com/results?search_query=pull+up+form+tutorial',knee:false,safe:false},
-    {id:'kb-row',n:'KB Bent-over row',d:'Hinge ~45°, elbow drives back to hip. Neutral spine always.',s:'3×10/side',r:'60s',l:'https://www.youtube.com/results?search_query=kettlebell+bent+over+row+tutorial',knee:false,safe:false},
-    {id:'db-curl',n:'DB bicep curl',d:'Seated or standing. Supinate wrist at top. Controlled descent — 2s down. Arms get hit twice a week: KB curl Sunday + DB curl Monday.',s:'3×12',r:'60s',l:'https://www.youtube.com/results?search_query=dumbbell+bicep+curl+tutorial',knee:false,safe:false},
-   ],
-   core:[],
-   triceps:[
-    {id:'cable-pushdown',n:'Cable tricep pushdown',d:'Rope or bar attachment, elbows pinned to sides. Full extension at bottom. Elbow-safe.',s:'3×12',r:'60s',l:'https://www.youtube.com/results?search_query=cable+tricep+pushdown+tutorial',knee:false,safe:false},
-   ],
-   abs:[
-    {id:'cable-crunch',n:'Cable crunch',d:'Kneel at cable stack, rope at top. Hold at ears, crunch abs down. Best direct ab exercise for visible definition.',s:'4×15',r:'45s',l:'https://www.youtube.com/results?search_query=cable+crunch+ab+exercise+tutorial',knee:false,safe:false},
-    {id:'hanging-knee',n:'Hanging knee raise',d:'Hang from pull-up bar, knees to chest. Controlled — no swinging. Use ab straps if left elbow uncomfortable.',s:'3×12',r:'45s',l:'https://www.youtube.com/results?search_query=hanging+knee+raise+tutorial',knee:false,safe:false},
-   ],
-   cooldown:[
-    {id:'face-pull',n:'Face pull / band pull-apart',d:'Rear delt + rotator cuff rehab. Cable at face height, pull to ears. Protects your shoulder for swimming. Never skip.',s:'3×15',r:'45s',l:'https://www.youtube.com/results?search_query=face+pull+cable+rotator+cuff',knee:false,safe:false},
-    {id:'pec-hang',n:'Doorframe pec stretch + passive bar hang',d:'Pec: forearms on frame, lean 45s each side. Hang: fully relax 30s.',s:'2×45s + 2×30s',r:'',l:'',knee:false,safe:false},
-    {id:'z2-bike',n:'Zone 2 bike finisher',d:'10 min easy conversational pace.',s:'10 min',r:'',l:'',knee:false,safe:false},
-    {id:'tke',n:'Terminal knee extension (band)',d:'3×15 daily habit.',s:'3×15',r:'',l:'https://www.youtube.com/results?search_query=terminal+knee+extension+band',knee:false,safe:false},
-   ],
-   opt:null,
-   meals:{type:'training',kcal:2750,prot:175,carbs:310,fat:75,items:[
-    {t:'08:00',s:'Pre-train',h:'Yogurt + creatine',f:'1 protein yogurt + banana + 5g creatine',p:'~22g protein'},
-    {t:'10:30',s:'Post-train',h:'Second yogurt',f:'1 protein yogurt + oats',p:'~22g protein'},
-    {t:'12:30',s:'Pre-shift',h:'Big pre-shift plate',f:'200g chicken or turkey + 160g rice + salad.',p:'~48g protein'},
-    {t:'17:00',s:'Work',h:'Shake at work',f:'1 scoop protein shake + walnuts',p:'~25g protein'},
-    {t:'20:00',s:'Dinner',h:'Recovery dinner',f:'Turkey stir-fry + rice noodles + broccoli + soy sauce',p:'~44g protein · total ~161g'},
-   ]}
-  },
-  // TUESDAY
-  {day:'Tue',ico:'🏊',type:'rest',pill:'Optional',pc:'pr',
-   title:'Tuesday — optional swim / sport',
-   shift:'Morning free · Work 15→19',sub:'Swim, basketball or football only if you feel good.',
-   badge:'Optional sport',bc:'bg-rest',dayKey:null,wfh:false,
-   note:'3 mandatory sessions are Sun/Mon/Thu. Tuesday morning is free — perfect for an easy swim if the body feels good. Never forced.',
-   shakeType:'rest',
-   warmup:[],main:[],core:[],cooldown:[],triceps:[],abs:[],
-   opt:[
-    {title:'🏊 Morning swim — 30–40 min easy',note:'Ideal — morning free, pool available. Zone 2 pace, no flip turns if knee flags.'},
-    {title:'🏀 Basketball or football',note:'If something is on — go. That is your Tuesday.'},
-    {title:'🚶 Walk only',note:'If tired after Sunday + Monday. Enough.'},
-    {title:'Rest completely',note:'Mandatory sessions done. Tuesday is a free day.'},
-   ],
-   meals:{type:'rest',kcal:2500,prot:165,carbs:270,fat:70,items:[
-    {t:'08:30',s:'Morning',h:'First yogurt',f:'1 protein yogurt + apple',p:'~22g protein'},
-    {t:'11:00',s:'Mid-morning',h:'Second yogurt',f:'1 protein yogurt + rice cakes',p:'~22g protein'},
-    {t:'13:00',s:'Lunch',h:'Tuna or sardine bowl',f:'160g tuna + chickpeas + cucumber + tahini + pita',p:'~42g protein'},
-    {t:'17:00',s:'Work',h:'Protein shake',f:'1 scoop + pear',p:'~25g protein'},
-    {t:'20:00',s:'Dinner',h:'Beef stir-fry',f:'180g lean beef + rice + broccoli + soy sauce',p:'~40g protein · total ~151g'},
-   ]}
-  },
-  // WEDNESDAY
-  {day:'Wed',ico:'📚',type:'blocked',pill:'Blocked',pc:'pb',
-   title:'Wednesday — always blocked',
-   shift:'8→17 · Course 18→21',sub:'Even on evening shift weeks. No gym.',
-   badge:'Blocked',bc:'bg-blocked',dayKey:null,wfh:false,
-   note:'Wednesday always blocked — 08→17 work + 18→21 course.',
-   shakeType:'rest',
-   warmup:[],main:[],core:[],cooldown:[],triceps:[],abs:[],
-   opt:[
-    {title:'Terminal knee extension (band)',note:'3×15 at home. Daily habit.'},
-    {title:'10 min walk',note:'To/from course.'},
-   ],
-   meals:{type:'rest',kcal:2500,prot:165,carbs:270,fat:70,items:[
-    {t:'Work',s:'~8:30',h:'Yogurt + creatine',f:'1 protein yogurt + banana + 5g creatine',p:'~22g protein'},
-    {t:'11:00',s:'Work',h:'Second yogurt',f:'1 protein yogurt + fruit',p:'~22g protein'},
-    {t:'13:00',s:'Lunch',h:'Fish lunch',f:'180g cod or tuna + rice + salad.',p:'~38g protein'},
-    {t:'17:15',s:'Pre-course',h:'Shake before course',f:'1 scoop protein shake + rice cake.',p:'~25g protein'},
-    {t:'21:15',s:'Post-course',h:'Light dinner',f:'3 eggs + rice cakes + cucumber.',p:'~22g protein · total ~129g'},
-   ]}
-  },
-  // THURSDAY — Day A (WFH)
-  {day:'Thu',ico:'🏋️',type:'gym',pill:'Day C',pc:'pg',
-   title:'Day C — lower body',
-   shift:'🏠 Work from home · flexible timing',sub:'Train whenever works. Lower body fully recovered.',
-   badge:'Gym · ~50 min',bc:'bg-gym',dayKey:'C',wfh:true,
-   note:'WFH day on evening shift week. Flexible timing — lower body fully recovered from Sunday.',
-   shakeType:'training_post',
-   warmup:[
-    {id:'bike-wu',n:'Stationary bike — easy',d:'5 min.',s:'5 min',r:'',l:'',knee:false,safe:false},
-    {id:'hip9090',n:'Hip 90/90 rotations',d:'2×10/side.',s:'2×10/side',r:'',l:'https://www.youtube.com/results?search_query=hip+90+90+rotation+mobility',knee:false,safe:false},
-    {id:'wgs',n:"World's greatest stretch",d:'5/side.',s:'5/side',r:'',l:'https://www.youtube.com/results?search_query=worlds+greatest+stretch+tutorial',knee:false,safe:false},
-   ],
-   main:[
-    {id:'goblet-squat',n:'KB Goblet squat',d:'Pain-free depth. Pause 1s.',s:'4×8',r:'90s',l:'https://www.youtube.com/results?search_query=kettlebell+goblet+squat+tutorial',knee:false,safe:false},
-    {id:'sl-rdl',n:'KB Single-leg RDL',d:'Left first. Right: light, shorter range.',s:'3×8/side',r:'75s',l:'https://www.youtube.com/results?search_query=single+leg+RDL+kettlebell',knee:false,safe:true},
-    {id:'lat-lunge',n:'Lateral lunge — 50% range',d:'Wide step only.',s:'3×8/side',r:'60s',l:'https://www.youtube.com/results?search_query=lateral+lunge+modified',knee:true,safe:false},
-    {id:'kb-swing',n:'KB Swing',d:'Maximum hip drive. 4×15.',s:'4×15',r:'60s',l:'https://www.youtube.com/results?search_query=kettlebell+swing+tutorial',knee:false,safe:true},
-    {id:'step-up',n:'Step-up to balance',d:'Drive through heel, hold 2s at top.',s:'3×8/side',r:'75s',l:'https://www.youtube.com/results?search_query=step+up+balance+exercise',knee:true,safe:false},
-   ],
-   core:[
-    {id:'kb-dl-hold',n:'Single-arm KB deadlift hold',d:'Pick up KB, stand tall, hold 40s. No side lean.',s:'3×40s/side',r:'45s',l:'https://www.youtube.com/results?search_query=single+arm+kettlebell+deadlift+tutorial',knee:false,safe:false},
-    {id:'dead-bug',n:'Dead bug',d:'Lower opposite arm + leg slowly.',s:'3×8/side',r:'30s',l:'https://www.youtube.com/results?search_query=dead+bug+core+tutorial',knee:false,safe:false},
-   ],
-   triceps:[],abs:[],
-   cooldown:[
-    {id:'pigeon',n:'Pigeon pose',d:'2×60s/side.',s:'2×60s/side',r:'',l:'https://www.youtube.com/results?search_query=pigeon+pose+stretch',knee:false,safe:false},
-    {id:'quad-ham',n:'Quad + hamstring stretch',d:'2×45s each.',s:'2×45s each',r:'',l:'https://www.youtube.com/results?search_query=quad+hamstring+stretch',knee:false,safe:false},
-    {id:'tke',n:'Terminal knee extension + Wall sit',d:'TKE 4×15. Wall sit 3×40s.',s:'4×15 + 3×40s',r:'',l:'https://www.youtube.com/results?search_query=terminal+knee+extension+band',knee:false,safe:false},
-   ],
-   opt:null,
-   meals:{type:'training',kcal:2750,prot:175,carbs:310,fat:75,items:[
-    {t:'Morning',s:'WFH',h:'First yogurt + creatine',f:'1 protein yogurt + banana + 5g creatine',p:'~22g protein'},
-    {t:'Mid-morning',s:'WFH',h:'Second yogurt',f:'1 protein yogurt + oats',p:'~22g protein'},
-    {t:'12:30',s:'Lunch',h:'Big pre-shift plate',f:'200g chicken + 170g rice + salad + olive oil.',p:'~50g protein'},
-    {t:'17:00',s:'Work',h:'Shake at work',f:'1 scoop protein shake + walnuts',p:'~25g protein'},
-    {t:'20:00',s:'Dinner',h:'Recovery dinner',f:'180g salmon + sweet potato + roasted broccoli + olive oil',p:'~40g protein · total ~159g'},
-   ]}
-  },
-  // FRIDAY (WFH)
-  {day:'Fri',ico:'🌙',type:'optional',pill:'Light mobility',pc:'po',
-   title:'Friday — light mobility at home',
-   shift:'🏠 Work from home · No sport',sub:'15–20 min only. At home, no gym needed.',
-   badge:'Home mobility',bc:'bg-opt',dayKey:null,wfh:true,
-   note:'Friday is not a training day. Mandatory sessions done. 15–20 min light mobility at home before Shabbat — nothing more.',
-   shakeType:'rest',
-   warmup:[],core:[],cooldown:[],triceps:[],abs:[],
-   main:[
-    {id:'hip9090',n:'Hip 90/90 rotations',d:'On the floor at home. Rotate knees side to side, hold 2s each end.',s:'2×10/side',r:'',l:'https://www.youtube.com/results?search_query=hip+90+90+rotation+mobility',knee:false,safe:false},
-    {id:'bretzel',n:'Bretzel stretch',d:'2×60s/side. Hip flexor + thoracic combo.',s:'2×60s/side',r:'',l:'https://www.youtube.com/results?search_query=bretzel+stretch+tutorial',knee:false,safe:false},
-    {id:'deep-squat',n:'Deep squat hold',d:'2×60s. 5 slow breaths at the bottom.',s:'2×60s',r:'',l:'https://www.youtube.com/results?search_query=deep+squat+hold+mobility',knee:false,safe:false},
-    {id:'tke',n:'Terminal knee extension (band)',d:'3×15 right knee. Daily habit.',s:'3×15',r:'',l:'https://www.youtube.com/results?search_query=terminal+knee+extension+band',knee:false,safe:false},
-   ],
-   opt:null,
-   meals:{type:'rest',kcal:2500,prot:160,carbs:265,fat:68,items:[
-    {t:'Morning',s:'WFH',h:'First yogurt + creatine',f:'1 protein yogurt + banana + 5g creatine',p:'~22g protein'},
-    {t:'Mid-morning',s:'WFH',h:'Second yogurt',f:'1 protein yogurt + orange',p:'~22g protein'},
-    {t:'13:00',s:'Lunch',h:'Pre-Shabbat plate',f:'200g chicken + rice + salad.',p:'~46g protein'},
-    {t:'19:30',s:'Shabbat dinner',h:'Shabbat meal',f:'Traditional. Enjoy.',p:'~50g+ · total ~140g+'},
-   ]}
-  },
-  // SATURDAY
-  {day:'Sat',ico:'✡️',type:'shabbat',pill:'Shabbat',pc:'ps',
-   title:'Shabbat — full rest',
-   shift:'No training · No sport',sub:'Excellent week. Earned.',
-   badge:'Shabbat',bc:'bg-shabbat',dayKey:null,wfh:false,
-   note:'Full rest. No gym, no sport.',
-   shakeType:'dairy',
-   warmup:[],main:[],core:[],cooldown:[],triceps:[],abs:[],
-   opt:[{title:'Shabbat walk — 30–45 min',note:'Recovery, not exercise.'}],
-   meals:{type:'shabbat',kcal:2600,prot:155,carbs:280,fat:72,items:[
-    {t:'Morning',s:'',h:'Light morning',f:'Eggs + bread + salads',p:'~25–30g protein'},
-    {t:'Lunch',s:'Shabbat',h:'Main meal',f:'Full traditional. No tracking.',p:'~50g+ protein'},
-    {t:'Afternoon',s:'Shalosh seudos',h:'Third meal',f:'Bread + salads + tuna.',p:'~20g protein'},
-   ]}
+   opt:[{title:'Shabbat walk — 30–45 min',note:'Comfortable pace. Recovery, not exercise.'}]
   },
 ]
 };
 
 // ═══ STATE ════════════════════════════════════════════════════
-let currentWeek='regular',selectedIdx=0;
+let currentWeek='regular'; // only one week type now
+let selectedIdx=0;
 let currentPhase=S.get('manualPhase')!==null?S.get('manualPhase'):getCurrentPhaseAuto();
 
 // ═══ PHASE APPLY ══════════════════════════════════════════════
@@ -1062,14 +797,6 @@ function applyPhase(ex,dayKey){
 }
 
 // ═══ RENDER CAL ═══════════════════════════════════════════════
-function setWeek(w,el){
-  currentWeek=w;
-  document.querySelectorAll('.wt').forEach(t=>t.classList.remove('on'));
-  el.classList.add('on');
-  selectedIdx=0;
-  hiitReset&&(()=>{try{hiitReset()}catch{}})();
-  renderCal();renderDetail(0);
-}
 function renderCal(){
   const days=DAYS[currentWeek];
   const cal=document.getElementById('cal');
@@ -1081,6 +808,7 @@ function renderCal(){
       selectedIdx=i;
       clearInterval(hiitState.interval);
       hiitState.running=false;
+      selectedIdx=i;
       renderCal();renderDetail(i);
     };
     btn.innerHTML=`<div class="d-name">${d.day}</div><div class="d-ico">${d.ico}${d.wfh?'<span style="font-size:8px;display:block;color:var(--teal-m)">WFH</span>':''}</div><div class="d-pill ${d.pc}">${d.pill}</div>`;
@@ -1152,22 +880,7 @@ function renderDetail(i){
   }
   if(!train) train=`<div class="nb nb-gray">🌙 <div>Full rest day.</div></div>`;
 
-  // Shakes
-  train+=shakesHTML(d.shakeType);
 
-  // Nutrition
-  const m=d.meals;
-  let meal=`<div class="macro-row">
-    <div class="mc"><div class="mc-val">${m.kcal.toLocaleString()}</div><div class="mc-lbl">kcal</div></div>
-    <div class="mc"><div class="mc-val">${m.prot}g</div><div class="mc-lbl">protein</div></div>
-    <div class="mc"><div class="mc-val">${m.carbs}g</div><div class="mc-lbl">carbs</div></div>
-    <div class="mc"><div class="mc-val">${m.fat}g</div><div class="mc-lbl">fat</div></div>
-  </div>`;
-  if(m.type==='shabbat') meal+=`<div class="nb nb-amber">✡️ <div>Shabbat — don't track. Eat fully.</div></div>`;
-  if(m.type==='training') meal+=`<div class="nb nb-teal">🏋️ <div>Training day — higher carbs for fuel and recovery.</div></div>`;
-  m.items.forEach(mi=>{
-    meal+=`<div class="meal-row"><div class="meal-tc">${mi.t}<span class="meal-ts">${mi.s}</span></div><div class="meal-body"><div class="meal-title">${mi.h}</div><div class="meal-items">${mi.f}</div><div class="meal-pro">${mi.p}</div></div></div>`;
-  });
 
   const dn={Sun:'Sunday',Mon:'Monday',Tue:'Tuesday',Wed:'Wednesday',Thu:'Thursday',Fri:'Friday',Sat:'Saturday'};
   det.innerHTML=`
@@ -1181,14 +894,9 @@ function renderDetail(i){
         <div class="dh-badge ${d.bc}">${d.badge}</div>
       </div>
     </div>
-    <div class="tabs">
-      <button class="tab on" onclick="switchTab(this,'tr${i}','me${i}')">🏋️ Training</button>
-      <button class="tab" onclick="switchTab(this,'me${i}','tr${i}')">🥗 Nutrition</button>
-    </div>
-    <div class="tab-body">
-      <div class="pnl on" id="tr${i}">${train}</div>
-      <div class="pnl" id="me${i}">${meal}</div>
-    </div>`;
+    <div class="tab-body" style="padding:13px 14px">
+      ${train}
+    </div>` ;
 }
 function switchTab(el,showId,hideId){
   document.getElementById(showId).classList.add('on');
@@ -1295,10 +1003,182 @@ function renderAll(){
   renderPhaseTabs();renderPhaseDesc();renderPhasesContent();renderCal();renderDetail(selectedIdx);
 }
 
+
+// ═══ WEEKLY TRACKER ═══════════════════════════════════════════
+const MANDATORY_DAYS = [0, 1, 4]; // Sun=0, Mon=1, Thu=4 (Israeli week)
+const DAY_NAMES = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const DAY_ICONS = ['🔥','💪','🏊','📚','🏋️','🌙','✡️'];
+
+function getWeekKey(date) {
+  const d = new Date(date);
+  // Get Sunday of this week (Israeli week starts Sunday)
+  const day = d.getDay();
+  const sunday = new Date(d);
+  sunday.setDate(d.getDate() - day);
+  return sunday.toISOString().split('T')[0];
+}
+
+function getSessionLog() {
+  return S.get('sessions') || {};
+}
+
+function saveSessionLog(log) {
+  S.set('sessions', log);
+}
+
+function logTodaySession() {
+  const today = new Date().toISOString().split('T')[0];
+  const log = getSessionLog();
+  if (log[today]) {
+    // Already logged — unlog
+    delete log[today];
+  } else {
+    log[today] = true;
+  }
+  saveSessionLog(log);
+  renderTracker();
+}
+
+function getWeekSessions(weekKey) {
+  const log = getSessionLog();
+  const sessions = [];
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(weekKey);
+    d.setDate(d.getDate() + i);
+    const key = d.toISOString().split('T')[0];
+    sessions.push(log[key] || false);
+  }
+  return sessions;
+}
+
+function countMandatoryDone(sessions) {
+  return MANDATORY_DAYS.filter(i => sessions[i]).length;
+}
+
+function getStreak() {
+  const log = getSessionLog();
+  const today = new Date();
+  let streak = 0;
+  let d = new Date(today);
+  // Go back week by week
+  for (let w = 0; w < 52; w++) {
+    const weekKey = getWeekKey(d);
+    const sessions = getWeekSessions(weekKey);
+    const mandatory = countMandatoryDone(sessions);
+    const weekDate = new Date(weekKey);
+    const isCurrentWeek = weekKey === getWeekKey(today);
+    if (isCurrentWeek) {
+      // Don't break on current week even if not complete yet
+      if (mandatory > 0) streak++;
+      d.setDate(d.getDate() - 7);
+      continue;
+    }
+    if (mandatory >= 3) {
+      streak++;
+      d.setDate(d.getDate() - 7);
+    } else {
+      break;
+    }
+  }
+  return streak;
+}
+
+function getWeekHistory() {
+  const history = [];
+  const today = new Date();
+  for (let w = 1; w <= 8; w++) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - (w * 7));
+    const weekKey = getWeekKey(d);
+    const sessions = getWeekSessions(weekKey);
+    const done = countMandatoryDone(sessions);
+    const total = sessions.filter(Boolean).length;
+    history.push({ weekKey, done, total });
+  }
+  return history.reverse();
+}
+
+function renderTracker() {
+  const today = new Date();
+  const todayStr = today.toISOString().split('T')[0];
+  const todayDayIdx = today.getDay(); // 0=Sun
+  const weekKey = getWeekKey(today);
+  const sessions = getWeekSessions(weekKey);
+  const log = getSessionLog();
+  const todayLogged = log[todayStr] || false;
+  const mandatoryDone = countMandatoryDone(sessions);
+  const streak = getStreak();
+
+  // Streak badge
+  document.getElementById('streak-num').textContent = streak;
+
+  // Week days grid
+  const wdWrap = document.getElementById('week-days');
+  wdWrap.innerHTML = '';
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(weekKey);
+    d.setDate(d.getDate() + i);
+    const isMandatory = MANDATORY_DAYS.includes(i);
+    const isDone = sessions[i];
+    const isToday = i === todayDayIdx;
+    const div = document.createElement('div');
+    div.className = 'wd' + (isDone ? ' done' : '') + (isMandatory ? ' mandatory' : '') + (isToday ? ' today' : '');
+    div.innerHTML = `<div class="wd-name">${DAY_NAMES[i]}</div><div class="wd-ico">${isDone ? '✅' : DAY_ICONS[i]}</div><div class="wd-dot"></div>`;
+    div.onclick = () => {
+      const dStr = d.toISOString().split('T')[0];
+      const sl = getSessionLog();
+      if (sl[dStr]) delete sl[dStr]; else sl[dStr] = true;
+      saveSessionLog(sl);
+      renderTracker();
+    };
+    wdWrap.appendChild(div);
+  }
+
+  // Progress bar
+  const pct = Math.min(100, (mandatoryDone / 3) * 100);
+  document.getElementById('tp-bar').style.width = pct + '%';
+  document.getElementById('tp-text').textContent = mandatoryDone + ' / 3 mandatory';
+
+  // Message
+  const msgs = [
+    "Week hasn't started yet — Sunday is Day A. Let's go 💪 Wednesday is optional.",
+    "1 session done. 2 more to complete the week.",
+    "2 sessions done. One more — Thursday. Stay on it.",
+    "✅ 3 mandatory sessions complete! Great week.",
+  ];
+  const extra = sessions.filter(Boolean).length - mandatoryDone;
+  let msg = msgs[Math.min(mandatoryDone, 3)];
+  if (mandatoryDone >= 3 && extra > 0) msg = `✅ ${3 + extra} sessions this week — above and beyond.`;
+  document.getElementById('tracker-msg').textContent = msg;
+
+  // Log button
+  const btn = document.getElementById('log-today-btn');
+  if (todayLogged) {
+    btn.textContent = '✓ Logged — tap to undo';
+    btn.className = 'log-btn logged';
+  } else {
+    btn.textContent = '✓ Log today\'s session';
+    btn.className = 'log-btn';
+  }
+
+  // History
+  const history = getWeekHistory();
+  const histRow = document.getElementById('history-row');
+  histRow.innerHTML = '<div style="font-size:10px;font-weight:700;color:var(--text3);white-space:nowrap;align-self:center">Past weeks</div>';
+  history.forEach(w => {
+    const d = new Date(w.weekKey);
+    const label = d.toLocaleDateString('en-GB', {day:'numeric',month:'short'});
+    const cls = w.done >= 3 ? 'full' : w.done > 0 ? 'partial' : 'miss';
+    const ico = w.done >= 3 ? '✅' : w.done > 0 ? '⚡' : '—';
+    histRow.innerHTML += `<div class="hw"><div class="hw-label">${label}</div><div class="hw-val ${cls}">${ico} ${w.done}/3</div></div>`;
+  });
+}
+
 // ═══ INIT ══════════════════════════════════════════════════════
 if(S.get('manualPhase')===null) currentPhase=getCurrentPhaseAuto();
 renderAll();
 updateStartDateDisplay();
+renderTracker();
 </script>
 </body>
 </html>
